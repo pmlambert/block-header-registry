@@ -54,11 +54,11 @@ contract BlockHeaderRegistry {
     }
 
     /**
-		@notice Add a signed block from any blockchain.
-		@notice Costs slightly more if the block has never been registered before.
-		@notice Processes fuse blocks slightly differently.
-		@param blocks List of block headers and signatures to add.
-	*/
+		  @notice Add a signed block from any blockchain.
+		  @notice Costs slightly more if the block has never been registered before.
+		  @notice Processes fuse blocks slightly differently.
+		  @param blocks List of block headers and signatures to add.
+	  */
     function addSignedBlocks(Block[] calldata blocks) external onlyValidator {
         for (uint256 i = 0; i < blocks.length; i++) {
             Block calldata _block = blocks[i];
